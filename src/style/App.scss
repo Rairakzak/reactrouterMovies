@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -37,17 +39,20 @@
   }
 }
 .active {
-  color: red;
+  opacity: 0.8;
+  border-bottom: 1px solid black;
 }
 nav {
+  font-size: 1.3rem;
   display: flex;
   justify-content: space-between;
+  box-shadow: 5px 5px 20px -14px rgba(125, 125, 125, 1);
   margin: 0;
-  background-color: #a5a5a5;
+  background-color: #e9e9e9;
   padding: 1rem 2rem;
-  color: white;
+  // color: white;
   .navlink {
-    color: #fff;
+    color: #282c34;
     text-decoration: none;
     font-weight: 700;
     margin: 0 1rem;
@@ -57,16 +62,17 @@ nav {
 
 // discover sec
 .discover {
-  margin: 4rem 0;
-  margin: 3rem;
-  padding: 0 3rem;
-  border-bottom: 1px solid hsla(220, 13%, 18%, 0.139);
-  form {
-    margin: 1rem 0 2rem 0;
-  }
+  padding: 4rem 0;
+  box-shadow: 10px 10px 30px -14px rgba(125, 125, 125, 1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .result-section {
-  width: 100%;
+  background-color: #a5a5a53c;
+  padding: 3rem 1rem;
+  min-height: 80vh;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,7 +80,8 @@ nav {
 }
 
 .movieCard {
-  width: 24rem;
+  background: #fff;
+  width: 21rem;
   height: 55vh;
   margin: 1rem;
   padding: 1rem;
@@ -100,4 +107,94 @@ button {
 }
 input {
   padding: 0.2rem;
+}
+.footer {
+  padding: 4rem;
+  color: #fff;
+  background-color: #282c34;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  ul {
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    width: 26rem;
+  }
+}
+.About {
+  min-height: 60vh;
+  padding: 4rem 0;
+  p {
+    padding: 2rem 3rem;
+    text-align: left;
+  }
+}
+
+.Detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin: 4rem auto;
+  min-height: 60vh;
+  .left-side {
+    width: 35rem;
+    padding: 1rem;
+  }
+  .right-side {
+    width: 50%;
+    text-align: left;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+}
+
+.home {
+  min-height: 60vh;
+  overflow-x: hidden;
+  .cta-block {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5rem;
+    .btnalike {
+      text-decoration: none;
+      font-size: 1.5rem;
+      background: red;
+      color: #fff !important;
+      padding: 0.3rem 0.7rem;
+    }
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    width: 510vw;
+  }
+  .swiper-slide {
+    height: 95vh;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-slide-prev {
+    position: relative;
+    z-index: 4;
+  }
 }
