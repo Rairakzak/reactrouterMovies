@@ -14,7 +14,7 @@ const DiscoverRecipesPage = () => {
       try {
         setSearchStatus({ status: "searching" });
         const response = await axios.get(
-          "http://www.omdbapi.com/?s=face&apikey=cb6555db"
+          "https://www.omdbapi.com/?s=face&apikey=cb6555db"
         );
         setSearchStatus({ status: "done", data: response.data.Search });
         console.log(response);

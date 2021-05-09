@@ -13,7 +13,7 @@ const DetailPage = () => {
       try {
         setDetailData({ status: "searching" });
         const res = await axios.get(
-          `http://www.omdbapi.com/?i=${id}&apikey=cb6555db`
+          `https://www.omdbapi.com/?i=${id}&apikey=cb6555db`
         );
         console.log("res", res.data);
         setDetailData({ status: "done", data: res.data });
